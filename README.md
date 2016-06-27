@@ -25,14 +25,18 @@ ENTRY_POINT 'fonetica' MODULE_NAME 'ZCIFonetica.dll';
 * Use a função `Fonetica` em igualdades:
 ```SQL
 SELECT NOME FROM CLIENTES
-  WHERE Fonetica(NOME) = Fonetica(:parametro)
-  ORDER BY NOME 
+WHERE Fonetica(NOME) = Fonetica(:parametro)
+ORDER BY NOME 
 ```
 * Use a função `FoneticaLike` jundamente com o operador `LIKE`:
 ```SQL
 SELECT NOME FROM CLIENTES
-  WHERE FoneticaLike(NOME) LIKE FoneticaLike(:parametro)
-  ORDER BY NOME 
+WHERE FoneticaLike(NOME) LIKE FoneticaLike(:parametro)
+ORDER BY NOME 
+```
+* Exclua a função com:
+```SQL
+DROP EXTERNAL FUNCTION ZCIFONETICA;
 ```
 
 ## Melhorias a serem implementadas
