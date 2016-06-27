@@ -34,3 +34,15 @@ SELECT NOME FROM CLIENTES
   WHERE FoneticaLike(NOME) LIKE FoneticaLike(:parametro)
   ORDER BY NOME 
 ```
+
+## Melhorias a serem implementadas
+
+* Sugestões de [Ivan Guimarães Meirelles](http://firebase.com.br/pipermail/lista_firebase.com.br/2007-April/041025.html):
+  * A letra L tem som de U quando está no final do nome ou quando é seguida  de consoante, com exceção da consoante H;
+  * As letras R e S no final dos nomes devem ser desconsideradas, por  exemplo: "VALDECI" e "VALDECIR" ou "MARCO" e "MARCOS";
+  * A letra P em muitos nomes é muda, como por exemplo em "BAPTISTA" que se lê "BATISTA".
+* Possível complemento de regras com base [neste artigo da revista Clube Delphi número 82](http://www.devmedia.com.br/artigo-clube-delphi-82-codigo-fonetico-no-firebird/10979)
+
+## Publicação na Revista Clube Delphi
+
+Esta biblioteca foi enviada à Revista Clube Delphi em 2005 por mim, devido a um concurso.
